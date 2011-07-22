@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MIViewer</class>
+ <widget class="QMainWindow" name="MIViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>689</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MIViewer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>689</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionGo_Back"/>
+    <addaction name="actionPrevious"/>
+    <addaction name="actionNext"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_In"/>
+    <addaction name="actionZoom_Out"/>
+    <addaction name="separator"/>
+    <addaction name="actionNormal"/>
+    <addaction name="actionFit_to_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionRotate_Left"/>
+    <addaction name="actionRotate_Right"/>
+    <addaction name="actionHorizontal_Flip"/>
+    <addaction name="actionVertical_Flip"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_MIV"/>
+    <addaction name="actionAbout_Qt"/>
+   </widget>
+   <widget class="QMenu" name="menuOptins">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionHide_Show_ToolBar"/>
+    <addaction name="actionHide_StatusBar"/>
+    <addaction name="actionFull_Screen"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuOptins"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionGo_Back"/>
+   <addaction name="actionPrevious"/>
+   <addaction name="actionNext"/>
+   <addaction name="actionZoom_Out"/>
+   <addaction name="actionNormal"/>
+   <addaction name="actionFit_to_Window"/>
+   <addaction name="actionZoom_In"/>
+   <addaction name="actionRotate_Left"/>
+   <addaction name="actionRotate_Right"/>
+   <addaction name="actionHorizontal_Flip"/>
+   <addaction name="actionVertical_Flip"/>
+   <addaction name="actionAbout_MIV"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Document-Open-48.png</normaloff>:/images/Gnome-Document-Open-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Document-Print-48.png</normaloff>:/images/Gnome-Document-Print-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Application-Exit-48.png</normaloff>:/images/Gnome-Application-Exit-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Go-Previous-48.png</normaloff>:/images/Gnome-Go-Previous-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Go-Next-48.png</normaloff>:/images/Gnome-Go-Next-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+   <property name="shortcut">
+    <string>6</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Zoom-In-48.png</normaloff>:/images/Gnome-Zoom-In-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Zoom-Out-48.png</normaloff>:/images/Gnome-Zoom-Out-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="actionNormal">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Zoom-Original-48.png</normaloff>:/images/Gnome-Zoom-Original-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Normal</string>
+   </property>
+   <property name="shortcut">
+    <string>0</string>
+   </property>
+  </action>
+  <action name="actionAbout_MIV">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Help-About-48.png</normaloff>:/images/Gnome-Help-About-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>About MIViewer</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/qt-logo.png</normaloff>:/images/qt-logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+  <action name="actionFit_to_Window">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Zoom-Fit-Best-48.png</normaloff>:/images/Gnome-Zoom-Fit-Best-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit to Window</string>
+   </property>
+   <property name="shortcut">
+    <string>.</string>
+   </property>
+  </action>
+  <action name="actionGo_Back">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Go-Top-48.png</normaloff>:/images/Gnome-Go-Top-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go Back</string>
+   </property>
+  </action>
+  <action name="actionRotate_Left">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Object-Rotate-Left-48.png</normaloff>:/images/Gnome-Object-Rotate-Left-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Left</string>
+   </property>
+  </action>
+  <action name="actionRotate_Right">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Object-Rotate-Right-48.png</normaloff>:/images/Gnome-Object-Rotate-Right-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Right</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_Flip">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Object-Flip-Horizontal-48.png</normaloff>:/images/Gnome-Object-Flip-Horizontal-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizontal Flip</string>
+   </property>
+  </action>
+  <action name="actionVertical_Flip">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/images/Gnome-Object-Flip-Vertical-48.png</normaloff>:/images/Gnome-Object-Flip-Vertical-48.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vertical Flip</string>
+   </property>
+  </action>
+  <action name="actionHide_Show_ToolBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide ToolBar</string>
+   </property>
+  </action>
+  <action name="actionHide_StatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hide StatusBar</string>
+   </property>
+  </action>
+  <action name="actionFull_Screen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Return</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
